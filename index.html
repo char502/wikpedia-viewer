@@ -10,7 +10,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+
+    <!-- node linked font-awesome
+    "./node_modules/font-awesome/css/font-awesome.min.css" -->
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 
@@ -20,7 +23,42 @@
 
 
 
+    <div class="container-fluid">
 
+        <div class="row">
+
+            <div class="col-sm-12 jumbotron text-center">
+
+                <h1 class="heading">Wikipedia Viewer</h1>
+                <p>
+                    <i>Live Search Results from Wikipedia</i>
+                </p>
+                <hr class="shortHr">
+                <div class="searchBox">
+                    <input type="text" class="form-control" name="search" id="search" placeholder="Something Interesting!">
+
+                    <br>
+
+                    <button class="btn btn-primary random">Article of the day</button>
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-8.col-sm-offset-2 searchResults">
+                <div id="update"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid embed-responsive embed-responsive-16by9">
+
+        <div class="row">
+            <iframe src="" frameborder="0" class="embed-responsive-item" width="1080" height="760" allowfullscreen></iframe>
+        </div>
+    </div>
 
 
     <!-- Optional JavaScript -->
