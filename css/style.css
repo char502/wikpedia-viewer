@@ -9,15 +9,22 @@
 #search[placeholder] {
   font-size: 20px;
 }
+.icon img {
+  width: 22px;
+  height: 22px;
+}
 .heading {
   margin: 0;
   color: #fff !important;
-  font-family: "Bowlby One", cursive;
+  font-family: "Tangerine", cursive;
+  font-size: 5em;
+  letter-spacing: 4px;
 }
 i {
   color: #fff;
-  font-size: 14px;
   letter-spacing: 2px;
+  font-family: "Tangerine", cursive;
+  font-size: 30px;
 }
 .searchBox {
   margin-top: 47px;
@@ -28,5 +35,5 @@ i {
 }
 .jumbotron {
   border-radius: 0px !important;
-  background-color: #092b40;
+  background-color: #330033;
 }
