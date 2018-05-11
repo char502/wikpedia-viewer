@@ -1,17 +1,29 @@
-document.getElementById("getJson").addEventListener("click", getJson);
+// document.getElementById("getJson").addEventListener("click", getJson);
 
-const searchTerm = document.getElementById("search").nodeValue;
+// const searchTerm = document.getElementById("search").nodeValue;
 
-const wikiApi =
-  "https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=SEARCH_QUERY_GOES_HERE";
-searchTerm;
+// const wikiApi =
+//   "https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=SEARCH_QUERY_GOES_HERE";
+// searchTerm;
 
-function getJson() {
-  //console.log(123);
-  fetch(wikiApi).then(function(res) {
-    console.log(res.json());
-  });
-}
+// function getJson() {
+//   //console.log(123);
+//   fetch(wikiApi).then(function(res) {
+//     console.log(res.json());
+//   });
+// }
+
+// To get a random wiki article on button click
+
+var button = document.getElementById("randomButton");
+
+button.addEventListener("click", function() {
+  window.open(
+    "https://en.wikipedia.org/wiki/Special:Random",
+    "_blank",
+    "noopener"
+  );
+});
 
 // "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=" +
 //       $("#search").val(),
