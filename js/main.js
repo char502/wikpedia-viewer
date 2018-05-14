@@ -6,23 +6,41 @@ function handleSubmit(event) {
   event.preventDefault();
   const input = document.querySelector(".searchForm-input").value;
   const searchQuery = input.trim();
-  console.log(searchQuery);
+  //console.log(searchQuery);
+  // call `fetchResults` and pass it the `searchQuery`
+  fetchResults(searchQuery);
 }
 
-// document.getElementById("getJson").addEventListener("click", getJson);
+function fetchResults(searchQuery) {
+  const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
+  //console.log(url);
+  fetch(url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      console.log(data);
+    })
+    .catch(function() {
+      console.log("An Error Occured");
+    });
+}
 
-// const searchTerm = document.getElementById("search").nodeValue;
-
-// const wikiApi =
-//   "https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=SEARCH_QUERY_GOES_HERE";
-// searchTerm;
-
-// function getJson() {
-//   //console.log(123);
-//   fetch(wikiApi).then(function(res) {
-//     console.log(res.json());
-//   });
+//       response => response.json())
+//     .then(data => {
+//       //console.log(response);
+//       console.log(data);
+//     })
+//     .catch(() => console.log("An Error occured"));
 // }
+
+// fetch(endpoint)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+//   });
 
 // To get a random wiki article on button click
 
