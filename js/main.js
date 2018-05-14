@@ -1,3 +1,14 @@
+const form = document.querySelector(".searchForm");
+
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const input = document.querySelector(".searchForm-input").value;
+  const searchQuery = input.trim();
+  console.log(searchQuery);
+}
+
 // document.getElementById("getJson").addEventListener("click", getJson);
 
 // const searchTerm = document.getElementById("search").nodeValue;
@@ -15,15 +26,17 @@
 
 // To get a random wiki article on button click
 
-var button = document.getElementById("randomButton");
+const button = document.getElementById("randomButton");
 
 button.addEventListener("click", function() {
   window.open(
     "https://en.wikipedia.org/wiki/Special:Random",
-    "_blank",
-    "noopener"
+    (target = "_blank"),
+    (rel = "noopener noreferrer")
   );
 });
+// const newWnd = window.open();
+// newWnd.opener = null;
 
 // "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=" +
 //       $("#search").val(),
