@@ -28,13 +28,33 @@ function fetchResults(searchQuery) {
     });
 }
 
-const resultPlace = document.getElementById("searchResult");
-
 function displayResults(results) {
   //console.log(results);
-  results.forEach(function(element) {
-    paraItem = document.getElementById("searchResult");
-    paraItem.innerHTML = paraItem.innerHTML + element + title + "<br>";
+  const resultPlace = document.querySelector(".searchResults");
+  // remove all child elements
+  resultPlace.innerHTML = "";
+
+  results.forEach(function(result) {
+    //console.log(element);
+    // const newTitle = result.title;
+    // console.log(newTitle);
+    const resultLink = encodeURI(
+      `https://en.wikipedia.org/wiki/${result.title}`
+    );
+    //console.log(resultLink);
+    resultPlace.insertAdjacentHTML(
+      "beforeend",
+      `
+    <div class="resultItem">
+      <h3 class="resultITem-title">
+        <a href="${resultLink}" target="_blank" rel="noopener">${
+        result.title
+      }</a>
+      </h3>
+      <span class="resultItem-snippet">${result.snippet}</span><br>
+      <a href="${resultLink}" class="resultITem-link" target="_blank" rel="noopener noreferrer">
+    </div>`
+    );
   });
 }
 
@@ -72,14 +92,6 @@ button.addEventListener("click", function() {
 });
 // const newWnd = window.open();
 // newWnd.opener = null;
-
-// "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=" +
-//       $("#search").val(),
-
-// "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=" +
-//   searchTerm;
-
-// https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=SEARCH_QUERY_GOES_HERE
 
 // function ajaxCall() {
 //   $.ajax({
