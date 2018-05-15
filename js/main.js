@@ -7,7 +7,7 @@ function handleSubmit(event) {
   const input = document.querySelector(".searchForm-input").value;
   const searchQuery = input.trim();
   //console.log(searchQuery);
-  // call `fetchResults` function and pass it the `searchQuery`
+  // call `fetchResults` and pass it the `searchQuery`
   fetchResults(searchQuery);
 }
 
@@ -19,45 +19,28 @@ function fetchResults(searchQuery) {
       return response.json();
     })
     .then(function(data) {
-      //console.log(data);
-      const results = data.query.search;
-      displayResults(results);
+      console.log(data);
     })
     .catch(function() {
       console.log("An Error Occured");
     });
 }
 
-const resultPlace = document.getElementById("searchResult");
-
-function displayResults(results) {
-  //console.log(results);
-  results.forEach(function(element) {
-    paraItem = document.getElementById("searchResult");
-    paraItem.innerHTML = paraItem.innerHTML + element + title + "<br>";
-  });
-}
-
-// const resOnPage = function(finalData) {
-//   finalData = data.query.search;
-//   console.log(finalData);
-//   for (let i in data) {
-//     const displaySearchResult = document.querySelector(".searchResult");
-//     const newElement = displaySearchResult.createElement("p");
-//     //newElement.id = data[i];
-//     //newElement.className = "SearchResultItem";
-//     newElement.immerHTML = data[i];
-//     displaySearchResult.appendChild(newElement);
-//   }
-// };
-
-//     fetch(url)
-//     .then(response => response.json())
+//       response => response.json())
 //     .then(data => {
+//       //console.log(response);
 //       console.log(data);
 //     })
 //     .catch(() => console.log("An Error occured"));
 // }
+
+// fetch(endpoint)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log(data);
+//   });
 
 // To get a random wiki article on button click
 
