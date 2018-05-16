@@ -28,9 +28,11 @@ function fetchResults(searchQuery) {
     });
 }
 
+const resultPlace = document.querySelector(".searchResults");
+
 function displayResults(results) {
   //console.log(results);
-  const resultPlace = document.querySelector(".searchResults");
+
   // remove all child elements
   resultPlace.innerHTML = "";
 
@@ -57,6 +59,35 @@ function displayResults(results) {
     );
   });
 }
+
+resultPlace.addEventListener("keyup", function() {
+  displayResults(results);
+});
+
+// const eventList = ["focus", "keyup"];
+// for (event of eventList) {
+//   resultPlace.addEventListener(event, function() {
+//     // your function body...
+//     displayResults(results);
+//   });
+// }
+
+// resultPlace.addEventListener(function() {
+//   resultPlace.focus();
+//   resultPlace.onkeyup() = null;
+//   resultPlace.onkeyup(function () {
+//     displayResults();
+//   })
+
+// });
+
+// $(document).ready(function() {
+//   $(".searchResults").focus();
+//   $(".searchResults").off("keyup");
+//   $(".searchResults").on("keyup", function() {
+//     displayResults();
+//   });
+// });
 
 // const resOnPage = function(finalData) {
 //   finalData = data.query.search;
