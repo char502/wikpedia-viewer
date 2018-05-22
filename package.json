@@ -1,0 +1,19 @@
+{
+  "name": "wikpedia-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/char502/wikpedia-viewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/char502/wikpedia-viewer/issues"
+  },
+  "homepage": "https://github.com/char502/wikpedia-viewer#readme"
+}
