@@ -1,7 +1,7 @@
 {
   "name": "wikpedia-viewer",
   "version": "1.0.0",
-  "description": "",
+  "description": "wiki-viewer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
