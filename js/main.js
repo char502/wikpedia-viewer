@@ -30,7 +30,7 @@ function requestResults(searchInputClean) {
     .then(function(data) {
       //console.log(data);
       const results = data.query.search;
-      //console.log(results);
+      console.log(results);
       finalResults(results);
     })
     .catch(function() {
